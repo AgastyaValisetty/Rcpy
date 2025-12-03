@@ -60,10 +60,10 @@ The progress bar isn't a Windows "lie bar" — it's actually telling the truth.
 **Option A — Run as script**
 
 1. Install AutoHotkey v2
-2. Run `GameCopyHotkey.ahk`
+2. Run `rcpy.ahk`
 
 **Option B — Compile to EXE**
-Right‑click → *Compile Script* → run anywhere without AHK.
+Download `RCPY.exe` and run it.
 
 ---
 
