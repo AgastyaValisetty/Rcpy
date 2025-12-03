@@ -62,7 +62,8 @@ The progress bar isn't a Windows "lie bar" — it's actually telling the truth.
 1. Install AutoHotkey v2
 2. Run `rcpy.ahk`
 
-**Option B — Compile to EXE**
+**Option B — Install EXE**
+
 Download `RCPY.exe` and run it.
 
 ---
