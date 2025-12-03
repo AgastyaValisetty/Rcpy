@@ -1,4 +1,4 @@
-# Smart Robocopy Hotkey
+# ⚡Lightning Fast Copy Paste
 
 A lightweight AutoHotkey v2 tool that lets you quickly copy **selected files or folders** using global hotkeys. It shows a clean popup with **real progress**, MB/GB copied, and lets you cancel instantly.
 
