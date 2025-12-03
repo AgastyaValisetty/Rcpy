@@ -1,56 +1,26 @@
 # Smart Robocopy Hotkey
 
-A lightweight productivity tool written in **AutoHotkey v2** that lets you instantly copy **selected files or folders** using global hotkeys — with a clean, modern popup UI that shows real progress, live MB/GB copied, and a smooth cancel option.
+A lightweight AutoHotkey v2 tool that lets you quickly copy **selected files or folders** using global hotkeys. It shows a clean popup with **real progress**, MB/GB copied, and lets you cancel instantly.
 
-Because sometimes Windows Explorer copies slower than a sloth doing yoga.
+Because Windows Explorer sometimes copies slower than a sloth doing yoga.
 
 ---
 
 ## 🚀 Features
 
-### ✅ Copy selected file or folder
-
-* **Ctrl + Alt + C** chooses the source
-
-  * If a file is selected → that file is used
-  * If a folder is selected → that folder is used
-  * If nothing is selected → nothing happens (safe)
-
-### ✅ Paste into the current folder
-
-* **Ctrl + Alt + V** copies the saved source into the folder currently open in Explorer
-* Uses **robocopy /E** for reliable, fast transfers
-* Never deletes anything (no `/MIR`, `/PURGE`, etc.)
-
-### ✅ Modern progress popup (bottom-right)
-
-* Light, clean UI
-* Rounded corners
-* Shows **real progress** based on actual bytes copied
-* Shows **current MB/GB copied / total**
-* Stays visible until the operation finishes or is cancelled
-
-### ❌ Silent toasts (no Windows sounds)
-
-* "Source set"
-* "Copy complete"
-* "Copy aborted"
-
-### 🛑 Cancel any time
-
-* **Ctrl + Alt + Esc** instantly aborts the copy
-* The robocopy process is force-stopped
-* Shows “Copy aborted ✖”
-
-### 🪄 Portable & standalone
-
-* You can compile this into an EXE and run it on any Windows PC — **no AutoHotkey required**.
+* Copy **selected file or folder** (Ctrl + Alt + C)
+* Paste into **current folder** (Ctrl + Alt + V)
+* Clean, minimal **progress popup** with real byte‑based progress
+* Shows **MB/GB copied** in real time
+* Silent notifications (no Windows sounds)
+* Cancel instantly (Ctrl + Alt + Esc)
+* Portable — can be compiled to EXE
 
 ---
 
 ## ⚡ Speed Comparison
 
-Robocopy is significantly faster and more efficient than Windows' built-in File Explorer copy.
+Robocopy is significantly faster and more efficient than Windows' built‑in File Explorer copy.
 
 **Typical performance differences:**
 
@@ -58,7 +28,6 @@ Robocopy is significantly faster and more efficient than Windows' built-in File 
 | --------------------------------------- | ------------------- | ------------------------ | ----------- |
 | Windows File Explorer                   | 80–120 MB/s         | Slow due to overhead     | Medium      |
 | This tool (robocopy)                    | 150–400 MB/s        | Much faster              | High        |
-| Explorer (when it “calculates forever”) | 🐌                  | 💤                       | 😭          |
 
 Robocopy is optimized for bulk copying. Explorer is optimized for showing you a spinning blue circle.
 
@@ -75,30 +44,26 @@ Robocopy is optimized for bulk copying. Explorer is optimized for showing you a 
 
 ---
 
-## 📁 How It Works Internally
+## 📁 How It Works
 
-* When copying begins, the script scans the source to calculate the **total size**.
-* It also scans the destination folder to record a **baseline size**.
-* During copying, every 150 ms, it measures how much the destination folder grew.
-* This gives a **true, accurate progress percentage**, without parsing robocopy output.
+* Detects the exact file or folder you selected
+* Calculates total size for accurate progress
+* Tracks destination folder growth to compute real percentage
+* Uses `robocopy /E` behind the scenes (safe, no deletions)
 
-This means your progress bar is not a "Windows-style lie bar" — it's the real thing.
+The progress bar isn't a Windows "lie bar" — it's actually telling the truth.
 
 ---
 
-## 🔧 Installation & Usage
+## 🔧 Installation
 
-### **Option A — Run the script (.ahk)**
+**Option A — Run as script**
 
 1. Install AutoHotkey v2
-2. Download `GameCopyHotkey.ahk`
-3. Double-click to run
+2. Run `GameCopyHotkey.ahk`
 
-### **Option B — Compile to EXE (recommended)**
-
-1. Right-click the `.ahk` file
-2. Choose **Compile Script**
-3. Use the generated `.exe` on any Windows PC — no dependencies
+**Option B — Compile to EXE**
+Right‑click → *Compile Script* → run anywhere without AHK.
 
 ---
 
@@ -111,30 +76,30 @@ While this tool:
 * never deletes files,
 * uses safe robocopy parameters, and
 * avoids dangerous flags like `/MIR`,
-  it is still **file-copying software**, and using it implies you understand the risks.
+  it is still **file‑copying software**, and using it implies you understand the risks.
 
 The author is **not responsible** for:
 
 * data loss,
-* partial files due to user-initiated cancellation,
+* partial files due to user‑initiated cancellation,
 * incorrect usage,
 * folder selection errors,
 * or unexpected system behavior.
 
 > **By using this tool, you agree that you do so at your own risk.**
 
-For legal safety, this project is licensed under the **MIT License**, which includes strong no-liability protections.
+For legal safety, this project is licensed under the **MIT License**, which includes strong no‑liability protections.
 
 ---
 
 ## 📄 License
 
 This project is released under the **MIT License**.
-You are free to use, modify, distribute, and include it in commercial or non-commercial projects, provided you include the license.
+You are free to use, modify, distribute, and include it in commercial or non‑commercial projects, provided you include the license.
 
 ---
 
 ## 💬 Final Note
 
 If you find this helpful, consider giving the repo a ⭐ on GitHub.
-It keeps the electrons motivated to travel faster during file transfers. 😉
+It keeps the electrons motivated to travel faster during file transfers. 😌
